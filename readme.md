@@ -1,17 +1,17 @@
 # Docker Environment
 
 
-workbench is just for autoring and administration it does not execute processes. this is what Kie server does. So if you’re running them on docker you should have two containers - one for workbench and the other for kie server. Kie server needs to connect to controller (workbench) so it get information about server templates. To check if they are connected in the Execution Server perspecitve (in workbench) you should see one conected under Remote Servers section.
+Workbench is just for autoring and administration it does not execute processes. this is what Kie server does. So if you’re running them on docker you should have two containers - one for workbench and the other for kie server. Kie server needs to connect to controller (workbench) so it get information about server templates. To check if they are connected in the Execution Server perspecitve (in workbench) you should see one conected under Remote Servers section.
 
 
 
-Workbench:
+##Workbench:
 
     docker run -p 8080:8080 -p 8001:8001 -d -e JAVA_OPTS="-Djava.net.preferIPv4Stack=true" --name jbpm-workbench jboss/jbpm-workbench-showcase:latest
 
 
 
-Engine: 
+##Engine: 
 
     docker run -p 8180:8080 -d --name kie-server -e JAVA_OPTS="-Djava.net.preferIPv4Stack=true" --link jbpm-workbench:kie_wb jboss/kie-server-showcase:latest
 
