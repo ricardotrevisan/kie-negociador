@@ -1,0 +1,23 @@
+{
+    "lookup": null,
+    "commands": [
+        {
+            "insert": {
+                "return-object": true,
+                "disconnected": false,
+                "out-identifier": "Applicant",
+                "entry-point": "DEFAULT",
+                "object": {
+                    "com.trevis.credito.Applicant": {
+                        "age": 213,
+                        "money": 10900,
+                        "approved": false
+                    }
+                }
+            }
+        },
+        {
+            "fire-all-rules": ""
+        }
+    ]
+}

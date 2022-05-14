@@ -1,0 +1,34 @@
+# GET http://localhost:8180/kie-server/services/rest/server HTTP/1.1
+# Authorization: Basic kieserver:kieserver1!
+# content-type: application/json
+#"lookup": "ksession",
+
+
+POST http://localhost:8180/kie-server/services/rest/server/containers/instances/credito HTTP/1.1
+Authorization: Basic kieserver:kieserver1!
+Accept: application/json
+Content-Type: application/json
+
+{
+    "lookup": null,
+    "commands": [
+        {
+            "insert": {
+                "return-object": true,
+                "disconnected": false,
+                "out-identifier": "Applicant",
+                "entry-point": "DEFAULT",
+                "object": {
+                    "com.trevis.credito.Applicant": {
+                        "age": 213,
+                        "money": 10900,
+                        "approved": false
+                    }
+                }
+            }
+        },
+        {
+            "fire-all-rules": ""
+        }
+    ]
+}

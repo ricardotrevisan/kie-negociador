@@ -1,0 +1,12 @@
+package com.trevis.credito;
+import com.trevis.credito.Applicant;
+
+no-loop
+rule "approve applicants"
+when
+    $a: Applicant(age>30, money > 1000, approved==false)
+then
+    modify($a){
+        setApproved(true);
+    }
+end

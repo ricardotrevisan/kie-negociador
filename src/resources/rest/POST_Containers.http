@@ -1,0 +1,11 @@
+
+POST http://localhost:8180/kie-server/services/rest/server/containers/credito/release-id HTTP/1.1
+Authorization: Basic kieserver:kieserver1!
+Accept: application/json
+Content-Type: application/json
+
+{
+    "group-id": "com.trevis",
+    "artifact-id": "credito",
+    "version": "1.0.0-SNAPSHOT"
+}

@@ -1,0 +1,4 @@
+GET http://localhost:8180/kie-server/services/rest/server/containers/credito HTTP/1.1
+Authorization: Basic admin:admin
+Accept: application/json
+Content-Type: application/json
