@@ -9,8 +9,6 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>brms</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,45 +18,31 @@
 
   <dependencies>
 
+   <dependency>
+		<groupId>ch.qos.logback</groupId>
+		<artifactId>logback-classic</artifactId>
+		<version>1.2.3</version>
+	</dependency>
+
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
       <artifactId>resteasy-client-20</artifactId>
       <version>3.5.1.Final</version>
     </dependency>
-
-    <dependency>
-      <groupId>org.jboss.resteasy</groupId>
-      <artifactId>resteasy-bom</artifactId>
-      <version>6.1.0.Beta2</version>
-      <type>pom</type>
-    </dependency>
-
+  
     <dependency>
       <groupId>org.drools</groupId>
       <artifactId>drools-bom</artifactId>
       <version>8.21.0.Beta</version>
       <type>pom</type>
-    </dependency>
+    </dependency>    
 
+  
     <dependency>
       <groupId>org.kie.server</groupId>
-      <artifactId>kie-server-controller</artifactId>
-      <version>7.69.0.Final</version>
-      <type>pom</type>
+      <artifactId>kie-server-client</artifactId>
+      <version>7.18.0.Final</version>
     </dependency>
- 
-    <dependency>
-      <groupId>org.kie.server</groupId>
-      <artifactId>kie-server-api</artifactId>
-      <version>7.69.0.Final</version>
-    </dependency>
-    
-    <dependency>
-      <groupId>org.kie.server</groupId>
-      <artifactId>kie-server-controller-client</artifactId>
-      <version>7.69.0.Final</version>
-    </dependency>
-
   </dependencies>
 
   <build>

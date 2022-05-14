@@ -1,4 +1,4 @@
-package br.com.crediativos.model;
+package com.trevis.credito;
 
 public class Applicant implements java.io.Serializable {
 
